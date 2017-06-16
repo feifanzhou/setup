@@ -1,0 +1,25 @@
+[color]
+	ui = true
+[user]
+	name = Feifan Zhou
+	email = feifan@me.com
+[credential]
+	helper = osxkeychain
+
+# http://haacked.com/archive/2014/07/28/github-flow-aliases/
+# https://gist.github.com/mwhite/6887990
+[alias]
+	co = checkout
+	newbr = checkout -b
+	newb = checkout -b
+	pom = push origin master
+	plom = pull origin master
+	lom = pull origin master
+	cm = commit -m
+	amend = commit -a --amend
+	s = status -s
+	l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	d = diff
+	da = diff --cached
+	ac = !git add . && git commit -am
+	ca = !git add . && git commit -am
