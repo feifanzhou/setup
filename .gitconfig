@@ -9,7 +9,10 @@
 # http://haacked.com/archive/2014/07/28/github-flow-aliases/
 # https://gist.github.com/mwhite/6887990
 [alias]
+	count = count-objects -vH
 	co = checkout
+	col = checkout @{-1}
+        com = checkout master
 	newbr = checkout -b
 	newb = checkout -b
 	pom = push origin master
@@ -18,8 +21,16 @@
 	cm = commit -m
 	amend = commit -a --amend
 	s = status -s
-	l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	l = log --graph --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
 	d = diff
 	da = diff --cached
 	ac = !git add . && git commit -am
 	ca = !git add . && git commit -am
+        bb = !git checkout master && git pull && git branch --delete @{-1}
+	uncommit = reset HEAD^
+	sd = stash show -p
+	stashdiff = stash show -p
+	sl = stash list
+	stashlist = stash list
+[push]
+	default = current
