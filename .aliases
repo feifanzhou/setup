@@ -9,8 +9,13 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
+alias desk="cd ~/Desktop"
+alias doc="cd ~/Documents"
+alias docs="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dev="cd ~/Developer"
+alias core="cd ~/Developer/trustwork-core"
+alias web="cd ~/Developer/trustwork-web"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -137,3 +142,12 @@ alias path='echo -e ${PATH//:/\\n}'
 
 alias simpleserver='python -m SimpleHTTPServer 8000'
 alias prettyjson='python -m json.tool'
+
+# Ruby & Rails
+alias multitest="RECORD_RUNTIME=true RAILS_ENV=test rake parallel:test"
+
+# Timestamp
+alias timestamp='date +%s'
+alias millitimestamp="node -e 'console.log(Date.now())'"
+alias mtimestamp="node -e 'console.log(Date.now())'"
+alias iso8601="node -e 'console.log((new Date()).toISOString())'"
